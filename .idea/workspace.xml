@@ -7,9 +7,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="test: testing creation of user">
+    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="test: testing find user by email">
+      <change afterPath="$PROJECT_DIR$/internal/infra/database/product_db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/database/user_db_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/user_db_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/database/interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/interfaces.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/database/user_db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/user_db.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="10" />
+    <option name="cachedIndexableFilesCount" value="19" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -49,61 +51,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0633725003262082" />
-      <entry key="MS500" value="1.607825587333108" />
-      <entry key="S2" value="2.4364343213501316" />
-      <entry key="S5" value="3.633688999507063" />
-      <entry key="S10" value="4.758872092094265" />
-      <entry key="S30" value="6.165905117968162" />
-      <entry key="S60" value="6.948604004741489" />
-      <entry key="M2" value="8.524602911543461" />
-      <entry key="M5" value="15.955004476372078" />
-      <entry key="M10" value="29.316658550150905" />
-      <entry key="M15" value="40.435009462820354" />
-      <entry key="M30" value="67.51078488345168" />
-      <entry key="H1" value="109.88600739850213" />
-      <entry key="H2" value="167.08914784892997" />
-      <entry key="H4" value="223.1725546289906" />
-      <entry key="D1" value="299.057817472242" />
-      <entry key="W1" value="316.032238842653" />
+      <entry key="MS100" value="1.4093844810936036E-13" />
+      <entry key="MS500" value="0.002711409492463426" />
+      <entry key="S2" value="0.30081299438271863" />
+      <entry key="S5" value="1.0173002966343807" />
+      <entry key="S10" value="1.6935705208251512" />
+      <entry key="S30" value="2.791249231229017" />
+      <entry key="S60" value="4.010621952384157" />
+      <entry key="M2" value="6.646622838132805" />
+      <entry key="M5" value="13.331964837747766" />
+      <entry key="M10" value="20.218298758187235" />
+      <entry key="M15" value="24.145610811111975" />
+      <entry key="M30" value="32.80463995928851" />
+      <entry key="H1" value="58.06018789926498" />
+      <entry key="H2" value="115.21122863693196" />
+      <entry key="H4" value="190.99373724849053" />
+      <entry key="D1" value="319.0198503128781" />
+      <entry key="W1" value="351.2400976054903" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.2345396895617383E-173" />
-      <entry key="MS500" value="3.176600819071876E-35" />
-      <entry key="S2" value="2.431281688125847E-9" />
-      <entry key="S5" value="4.349649136249087E-4" />
-      <entry key="S10" value="0.027784524726271794" />
-      <entry key="S30" value="0.4736852961485088" />
-      <entry key="S60" value="0.9811318895559017" />
-      <entry key="M2" value="1.7611694829450086" />
-      <entry key="M5" value="6.652249767403622" />
-      <entry key="M10" value="15.647877544724153" />
-      <entry key="M15" value="23.03024941150835" />
-      <entry key="M30" value="41.40913397410068" />
-      <entry key="H1" value="69.75522810598291" />
-      <entry key="H2" value="105.65377957178737" />
-      <entry key="H4" value="139.093833949817" />
-      <entry key="D1" value="182.7417236546632" />
-      <entry key="W1" value="192.32917810120037" />
+      <entry key="MS100" value="1.000000000273072" />
+      <entry key="MS500" value="1.012226236859895" />
+      <entry key="S2" value="1.377399678970594" />
+      <entry key="S5" value="2.0725534643844465" />
+      <entry key="S10" value="2.749137129080549" />
+      <entry key="S30" value="4.024083004174736" />
+      <entry key="S60" value="5.7289739594931515" />
+      <entry key="M2" value="9.217991640320346" />
+      <entry key="M5" value="17.859826708783984" />
+      <entry key="M10" value="26.250158970899747" />
+      <entry key="M15" value="30.756574001379583" />
+      <entry key="M30" value="38.646479426748364" />
+      <entry key="H1" value="56.02247046935267" />
+      <entry key="H2" value="92.60153590108959" />
+      <entry key="H4" value="139.28099027044397" />
+      <entry key="D1" value="215.7126205481217" />
+      <entry key="W1" value="234.62910976746193" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0142775740161105" />
-      <entry key="MS500" value="1.5948072095182606" />
-      <entry key="S2" value="2.431906314540612" />
-      <entry key="S5" value="3.63130945659241" />
-      <entry key="S10" value="4.781201256032688" />
-      <entry key="S30" value="6.616249217226515" />
-      <entry key="S60" value="7.904930008995483" />
-      <entry key="M2" value="10.262524142956353" />
-      <entry key="M5" value="22.568593004128935" />
-      <entry key="M10" value="44.91711141308078" />
-      <entry key="M15" value="63.41747547353755" />
-      <entry key="M30" value="108.87435434340695" />
-      <entry key="H1" value="179.60093863598445" />
-      <entry key="H2" value="272.7115918071175" />
-      <entry key="H4" value="362.2455096828282" />
-      <entry key="D1" value="481.7949280682377" />
-      <entry key="W1" value="508.360722377734" />
+      <entry key="MS100" value="2.5806104545544867E-4" />
+      <entry key="MS500" value="0.19672504805764432" />
+      <entry key="S2" value="1.2004785936021853" />
+      <entry key="S5" value="2.7112178146683035" />
+      <entry key="S10" value="4.146357959553038" />
+      <entry key="S30" value="6.654643958175529" />
+      <entry key="S60" value="9.623911821865084" />
+      <entry key="M2" value="15.771798153168811" />
+      <entry key="M5" value="31.115598974904803" />
+      <entry key="M10" value="46.40891336294996" />
+      <entry key="M15" value="54.854383264048145" />
+      <entry key="M30" value="71.41955386066586" />
+      <entry key="H1" value="114.05715149515044" />
+      <entry key="H2" value="207.78915168032293" />
+      <entry key="H4" value="330.2558534685867" />
+      <entry key="D1" value="534.7273786244308" />
+      <entry key="W1" value="585.8684108326937" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -284,7 +286,8 @@
     <MESSAGE value="feat: create user &amp; product entity and tests" />
     <MESSAGE value="feat: create user db" />
     <MESSAGE value="test: testing creation of user" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: testing creation of user" />
+    <MESSAGE value="test: testing find user by email" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: testing find user by email" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
