@@ -7,12 +7,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: create user db">
-      <change afterPath="$PROJECT_DIR$/internal/infra/database/user_db_test.go" afterDir="false" />
+    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="test: testing creation of user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/database/user_db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/user_db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/database/user_db_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/user_db_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +49,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000745828" />
-      <entry key="S10" value="1.0000161252494857" />
-      <entry key="S30" value="1.065602812237416" />
-      <entry key="S60" value="1.643891270274765" />
-      <entry key="M2" value="4.105705275600496" />
-      <entry key="M5" value="14.797710346172153" />
-      <entry key="M10" value="28.49477008985698" />
-      <entry key="M15" value="38.67239843025545" />
-      <entry key="M30" value="63.73356115766006" />
-      <entry key="H1" value="104.142324660616" />
-      <entry key="H2" value="159.1869616921936" />
-      <entry key="H4" value="212.92947567305163" />
-      <entry key="D1" value="285.1220744579063" />
-      <entry key="W1" value="301.19292858011113" />
+      <entry key="MS100" value="1.0633725003262082" />
+      <entry key="MS500" value="1.607825587333108" />
+      <entry key="S2" value="2.4364343213501316" />
+      <entry key="S5" value="3.633688999507063" />
+      <entry key="S10" value="4.758872092094265" />
+      <entry key="S30" value="6.165905117968162" />
+      <entry key="S60" value="6.948604004741489" />
+      <entry key="M2" value="8.524602911543461" />
+      <entry key="M5" value="15.955004476372078" />
+      <entry key="M10" value="29.316658550150905" />
+      <entry key="M15" value="40.435009462820354" />
+      <entry key="M30" value="67.51078488345168" />
+      <entry key="H1" value="109.88600739850213" />
+      <entry key="H2" value="167.08914784892997" />
+      <entry key="H4" value="223.1725546289906" />
+      <entry key="D1" value="299.057817472242" />
+      <entry key="W1" value="316.032238842653" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="4.268678397680793E-142" />
-      <entry key="MS500" value="5.324032705101921E-29" />
-      <entry key="S2" value="9.763269890385447E-8" />
-      <entry key="S5" value="0.0021717030816359763" />
-      <entry key="S10" value="0.06485328835791722" />
-      <entry key="S30" value="0.7094997562461888" />
-      <entry key="S60" value="1.9015428280267967" />
-      <entry key="M2" value="5.155414066506249" />
-      <entry key="M5" value="14.148220931019077" />
-      <entry key="M10" value="23.376424401270768" />
-      <entry key="M15" value="30.03634193743613" />
-      <entry key="M30" value="47.04923977145002" />
-      <entry key="H1" value="74.01364666976974" />
-      <entry key="H2" value="108.32861112649165" />
-      <entry key="H4" value="140.14926374376168" />
-      <entry key="D1" value="181.40662257208666" />
-      <entry key="W1" value="190.4290372446428" />
+      <entry key="MS100" value="3.2345396895617383E-173" />
+      <entry key="MS500" value="3.176600819071876E-35" />
+      <entry key="S2" value="2.431281688125847E-9" />
+      <entry key="S5" value="4.349649136249087E-4" />
+      <entry key="S10" value="0.027784524726271794" />
+      <entry key="S30" value="0.4736852961485088" />
+      <entry key="S60" value="0.9811318895559017" />
+      <entry key="M2" value="1.7611694829450086" />
+      <entry key="M5" value="6.652249767403622" />
+      <entry key="M10" value="15.647877544724153" />
+      <entry key="M15" value="23.03024941150835" />
+      <entry key="M30" value="41.40913397410068" />
+      <entry key="H1" value="69.75522810598291" />
+      <entry key="H2" value="105.65377957178737" />
+      <entry key="H4" value="139.093833949817" />
+      <entry key="D1" value="182.7417236546632" />
+      <entry key="W1" value="192.32917810120037" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9526379980439373" />
-      <entry key="MS500" value="0.9903428719330246" />
-      <entry key="S2" value="0.9975769899312715" />
-      <entry key="S5" value="1.0008765261623518" />
-      <entry key="S10" value="1.0593680949805124" />
-      <entry key="S30" value="1.7523813435601319" />
-      <entry key="S60" value="3.5001265303551787" />
-      <entry key="M2" value="9.188215366002513" />
-      <entry key="M5" value="28.86105555892567" />
-      <entry key="M10" value="51.79917428815153" />
-      <entry key="M15" value="68.6456146348743" />
-      <entry key="M30" value="110.73054316593031" />
-      <entry key="H1" value="178.11293060989502" />
-      <entry key="H2" value="267.4832915057203" />
-      <entry key="H4" value="353.0576237234657" />
-      <entry key="D1" value="466.5241043752639" />
-      <entry key="W1" value="491.6212762160457" />
+      <entry key="MS100" value="1.0142775740161105" />
+      <entry key="MS500" value="1.5948072095182606" />
+      <entry key="S2" value="2.431906314540612" />
+      <entry key="S5" value="3.63130945659241" />
+      <entry key="S10" value="4.781201256032688" />
+      <entry key="S30" value="6.616249217226515" />
+      <entry key="S60" value="7.904930008995483" />
+      <entry key="M2" value="10.262524142956353" />
+      <entry key="M5" value="22.568593004128935" />
+      <entry key="M10" value="44.91711141308078" />
+      <entry key="M15" value="63.41747547353755" />
+      <entry key="M30" value="108.87435434340695" />
+      <entry key="H1" value="179.60093863598445" />
+      <entry key="H2" value="272.7115918071175" />
+      <entry key="H4" value="362.2455096828282" />
+      <entry key="D1" value="481.7949280682377" />
+      <entry key="W1" value="508.360722377734" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -138,6 +135,7 @@
     "Go Test.TestProductWhenPriceIsInvalid in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
     "Go Test.TestProductWhenPriceIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
     "Go Test.TestUser_Create in github.com/clemilsonazevedo/9-apis/internal/infra/database.executor": "Run",
+    "Go Test.TestUser_FindUserByEmail in github.com/clemilsonazevedo/9-apis/internal/infra/database.executor": "Run",
     "Go Test.TestUser_ValidatePassword in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
@@ -171,7 +169,7 @@
       <recent name="$PROJECT_DIR$/configs" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestUser_Create in github.com/clemilsonazevedo/9-apis/internal/infra/database">
+  <component name="RunManager" selected="Go Test.TestUser_FindUserByEmail in github.com/clemilsonazevedo/9-apis/internal/infra/database">
     <configuration name="go build github.com/clemilsonazevedo/9-apis/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="9-apis" />
       <working_directory value="$PROJECT_DIR$" />
@@ -188,18 +186,6 @@
       <package value="github.com/clemilsonazevedo/9-apis/cmd/server" />
       <directory value="$PROJECT_DIR$" />
       <auto_managed_config_id value="$PROJECT_DIR$/cmd/server" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestNewProduct in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="9-apis" />
-      <working_directory value="$PROJECT_DIR$/internal/entity" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/clemilsonazevedo/9-apis/internal/entity" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestNewProduct\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestProductWhenNameIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -250,13 +236,25 @@
       <pattern value="^\QTestUser_Create\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestUser_FindUserByEmail in github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$/internal/infra/database" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/internal/infra/database" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestUser_FindUserByEmail\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestUser_FindUserByEmail in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
         <item itemvalue="Go Test.TestUser_Create in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
         <item itemvalue="Go Test.TestProductWhenPriceIsInvalid in github.com/clemilsonazevedo/9-apis/internal/entity" />
         <item itemvalue="Go Test.TestProductWhenPriceIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" />
         <item itemvalue="Go Test.TestProductWhenNameIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" />
-        <item itemvalue="Go Test.TestNewProduct in github.com/clemilsonazevedo/9-apis/internal/entity" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +283,8 @@
     <MESSAGE value="feat: create user entety and tests" />
     <MESSAGE value="feat: create user &amp; product entity and tests" />
     <MESSAGE value="feat: create user db" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create user db" />
+    <MESSAGE value="test: testing creation of user" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: testing creation of user" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
