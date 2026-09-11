@@ -7,14 +7,26 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="" />
+    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: create user &amp; product entity and tests">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/entity/product.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/entity/product_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/entity/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/entity/user_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="5" />
+    <option name="cachedIndexableFilesCount" value="10" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -25,67 +37,82 @@
     </option>
   </component>
   <component name="GOROOT" url="file://$USER_HOME$/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.27.0.darwin-arm64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ClemilsonAzevedo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ClemilsonAzevedo/9-apis.git",
+    "accountId": "d111ae37-6afb-43cc-89b3-ef646c33c322"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000002072" />
-      <entry key="S2" value="1.000712251373115" />
-      <entry key="S5" value="1.07751881386095" />
-      <entry key="S10" value="1.5049561467826034" />
-      <entry key="S30" value="4.046156841379212" />
-      <entry key="S60" value="7.541990208557352" />
-      <entry key="M2" value="13.309542994594576" />
-      <entry key="M5" value="26.192203934452436" />
-      <entry key="M10" value="39.00900030058913" />
-      <entry key="M15" value="46.415377227252364" />
-      <entry key="M30" value="56.830579943380805" />
-      <entry key="H1" value="63.67296838931881" />
-      <entry key="H2" value="67.62784718443835" />
-      <entry key="H4" value="69.75853452393099" />
-      <entry key="D1" value="71.61843734890411" />
-      <entry key="W1" value="71.94529155947697" />
+      <entry key="MS100" value="1.0000000995502376" />
+      <entry key="MS500" value="1.0397764922728474" />
+      <entry key="S2" value="1.49718073885375" />
+      <entry key="S5" value="2.174209338741882" />
+      <entry key="S10" value="2.796138857243614" />
+      <entry key="S30" value="3.5390840363034655" />
+      <entry key="S60" value="4.133878729607547" />
+      <entry key="M2" value="5.648322286118255" />
+      <entry key="M5" value="11.97295152325847" />
+      <entry key="M10" value="24.68474501615991" />
+      <entry key="M15" value="35.389411855355334" />
+      <entry key="M30" value="57.86055757299886" />
+      <entry key="H1" value="91.30837426754266" />
+      <entry key="H2" value="134.52782088996082" />
+      <entry key="H4" value="173.4897147629595" />
+      <entry key="D1" value="221.91992443875492" />
+      <entry key="W1" value="232.2171272438143" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.851859888774439E-34" />
-      <entry key="MS500" value="2.07642319487012E-7" />
-      <entry key="S2" value="0.02445667129741398" />
-      <entry key="S5" value="0.33852905850811693" />
-      <entry key="S10" value="1.0415914716642245" />
-      <entry key="S30" value="3.2207841535722768" />
-      <entry key="S60" value="5.253560987850846" />
-      <entry key="M2" value="7.900356950991537" />
-      <entry key="M5" value="13.071652037135417" />
-      <entry key="M10" value="17.963106644754514" />
-      <entry key="M15" value="20.715097640583114" />
-      <entry key="M30" value="24.52624713978998" />
-      <entry key="H1" value="27.004030863083763" />
-      <entry key="H2" value="28.429244896523723" />
-      <entry key="H4" value="29.19530842773026" />
-      <entry key="D1" value="29.86310074306399" />
-      <entry key="W1" value="29.980373415472023" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.816203417463976E-99" />
+      <entry key="S2" value="2.275287582176069E-25" />
+      <entry key="S5" value="2.3095408512709376E-10" />
+      <entry key="S10" value="3.1079549306928135E-5" />
+      <entry key="S30" value="0.11264794174101478" />
+      <entry key="S60" value="1.029926160707899" />
+      <entry key="M2" value="3.7012683299831806" />
+      <entry key="M5" value="11.571802355106888" />
+      <entry key="M10" value="22.73265592430833" />
+      <entry key="M15" value="30.917970397940962" />
+      <entry key="M30" value="46.61123526273752" />
+      <entry key="H1" value="67.40637618304773" />
+      <entry key="H2" value="92.19084832559668" />
+      <entry key="H4" value="113.62686812613954" />
+      <entry key="D1" value="139.6036072338053" />
+      <entry key="W1" value="145.05774011100496" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.09214182608069382" />
-      <entry key="MS500" value="0.6207137906856534" />
-      <entry key="S2" value="0.9035943985059551" />
-      <entry key="S5" value="1.2881294934314105" />
-      <entry key="S10" value="2.3767883928284936" />
-      <entry key="S30" value="7.102890815078371" />
-      <entry key="S60" value="12.657830099512966" />
-      <entry key="M2" value="21.10069410219846" />
-      <entry key="M5" value="39.18385588434049" />
-      <entry key="M10" value="56.91208569924372" />
-      <entry key="M15" value="67.08241366515955" />
-      <entry key="M30" value="81.32703542501015" />
-      <entry key="H1" value="90.66019180114708" />
-      <entry key="H2" value="96.04813369562926" />
-      <entry key="H4" value="98.949214092354" />
-      <entry key="D1" value="101.48074482041797" />
-      <entry key="W1" value="101.92555110301093" />
+      <entry key="MS100" value="1.2216714053110562E-4" />
+      <entry key="MS500" value="0.20449502603298428" />
+      <entry key="S2" value="1.1337846012592563" />
+      <entry key="S5" value="2.008682797794966" />
+      <entry key="S10" value="2.709534250340876" />
+      <entry key="S30" value="3.616110008285172" />
+      <entry key="S60" value="5.119646666360622" />
+      <entry key="M2" value="9.283200623853142" />
+      <entry key="M5" value="23.457806253517674" />
+      <entry key="M10" value="47.329012734203516" />
+      <entry key="M15" value="66.22659327368572" />
+      <entry key="M30" value="104.41084586734853" />
+      <entry key="H1" value="158.67110246025786" />
+      <entry key="H2" value="226.6891179032707" />
+      <entry key="H4" value="287.0984783712356" />
+      <entry key="D1" value="361.51984226441704" />
+      <entry key="W1" value="377.2743201356659" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -106,7 +133,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultGoTemplateProperty": "Go File",
+    "Go Test.TestNewProduct in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
+    "Go Test.TestNewUser in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
+    "Go Test.TestProductWhenNameIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
+    "Go Test.TestProductWhenPriceIsInvalid in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
+    "Go Test.TestProductWhenPriceIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
+    "Go Test.TestUser_ValidatePassword in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
     "RunOnceActivity.GoLinterPluginStorageMigration": "true",
@@ -117,18 +151,117 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
     "go.sdk.automatically.set": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/clema/www/courses/fullcycle-golang/9-apis",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "settings.sync",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/cmd/server" />
+      <recent name="$PROJECT_DIR$/cmd" />
+      <recent name="$PROJECT_DIR$/configs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.TestProductWhenPriceIsInvalid in github.com/clemilsonazevedo/9-apis/internal/entity">
+    <configuration name="go build github.com/clemilsonazevedo/9-apis/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <auto_managed_config_id value="$PROJECT_DIR$/cmd" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/clemilsonazevedo/9-apis/cmd/server" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/cmd/server" />
+      <directory value="$PROJECT_DIR$" />
+      <auto_managed_config_id value="$PROJECT_DIR$/cmd/server" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestNewProduct in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$/internal/entity" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/internal/entity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestNewProduct\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestProductWhenNameIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$/internal/entity" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/internal/entity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestProductWhenNameIsRequired\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestProductWhenPriceIsInvalid in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$/internal/entity" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/internal/entity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestProductWhenPriceIsInvalid\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestProductWhenPriceIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$/internal/entity" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/internal/entity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestProductWhenPriceIsRequired\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestUser_ValidatePassword in github.com/clemilsonazevedo/9-apis/internal/entity" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="9-apis" />
+      <working_directory value="$PROJECT_DIR$/internal/entity" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/9-apis/internal/entity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestUser_ValidatePassword\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestProductWhenPriceIsInvalid in github.com/clemilsonazevedo/9-apis/internal/entity" />
+        <item itemvalue="Go Test.TestProductWhenPriceIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" />
+        <item itemvalue="Go Test.TestProductWhenNameIsRequired in github.com/clemilsonazevedo/9-apis/internal/entity" />
+        <item itemvalue="Go Test.TestNewProduct in github.com/clemilsonazevedo/9-apis/internal/entity" />
+        <item itemvalue="Go Test.TestUser_ValidatePassword in github.com/clemilsonazevedo/9-apis/internal/entity" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -149,6 +282,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: create user entety and tests" />
+    <MESSAGE value="feat: create user &amp; product entity and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create user &amp; product entity and tests" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
