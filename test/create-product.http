@@ -1,0 +1,1 @@
+### Create ProductPOST http://localhost:8080/productsContent-Type: application/json{  "name": "Macbook Pro",  "price": {{$random.float()}}}###

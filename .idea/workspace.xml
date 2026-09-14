@@ -7,8 +7,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: create some tests to product_db dile">
+    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="test: add test of update, delete and find by id product">
+      <change afterPath="$PROJECT_DIR$/internal/dto/dto.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/infra/webserver/handlers/product_handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/create-product.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/database/interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/interfaces.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/database/product_db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/product_db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/infra/database/product_db_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/product_db_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +23,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="19" />
+    <option name="cachedIndexableFilesCount" value="20" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTTP Request" />
         <option value="Go File" />
       </list>
     </option>
@@ -31,79 +38,91 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ClemilsonAzevedo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ClemilsonAzevedo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ClemilsonAzevedo/9-apis.git",
-    "accountId": "d111ae37-6afb-43cc-89b3-ef646c33c322"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ClemilsonAzevedo/9-apis.git&quot;,
+    &quot;accountId&quot;: &quot;d111ae37-6afb-43cc-89b3-ef646c33c322&quot;
   }
+}</component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;ada8ae5cf479f96a16acefcbe773459d5aec4958&quot; value=&quot;###&amp;#10;POST http://localhost:8080/products&amp;#10;&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState"><![CDATA[{
+  "isOnboardingCommentShown": true
 }]]></component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+  </component>
+  <component name="LLMProjectSettings">
+    <option name="turned_on" value="false" />
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.7485611163296E-178" />
-      <entry key="MS500" value="3.563787749307574E-36" />
-      <entry key="S2" value="1.3749982481758014E-9" />
-      <entry key="S5" value="3.108761056762937E-4" />
-      <entry key="S10" value="0.025180544178349723" />
-      <entry key="S30" value="0.6738503096411886" />
-      <entry key="S60" value="1.7175182040271244" />
-      <entry key="M2" value="3.3745463444255366" />
-      <entry key="M5" value="8.442385535059662" />
-      <entry key="M10" value="17.717295370982413" />
-      <entry key="M15" value="27.45020766103638" />
-      <entry key="M30" value="53.95929472356205" />
-      <entry key="H1" value="94.9966468788102" />
-      <entry key="H2" value="162.05912574636446" />
-      <entry key="H4" value="253.31355100261467" />
-      <entry key="D1" value="425.1233658080761" />
-      <entry key="W1" value="471.5724311329821" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.968904587882075E-293" />
+      <entry key="S2" value="9.619203012790554E-74" />
+      <entry key="S5" value="1.2687241152119724E-29" />
+      <entry key="S10" value="1.0860516139353794E-14" />
+      <entry key="S30" value="1.2242239144285956E-4" />
+      <entry key="S60" value="0.0436971637890703" />
+      <entry key="M2" value="1.019960726858322" />
+      <entry key="M5" value="9.0140521385435" />
+      <entry key="M10" value="21.241759976485067" />
+      <entry key="M15" value="29.629069166924833" />
+      <entry key="M30" value="48.07665597030923" />
+      <entry key="H1" value="87.0768965939749" />
+      <entry key="H2" value="165.39651197148368" />
+      <entry key="H4" value="283.563205546557" />
+      <entry key="D1" value="541.6030364190839" />
+      <entry key="W1" value="618.7027024168777" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0003895240428755" />
-      <entry key="S2" value="1.1404861686861907" />
-      <entry key="S5" value="1.4563592229171116" />
-      <entry key="S10" value="1.70195905675972" />
-      <entry key="S30" value="2.4941685464304344" />
-      <entry key="S60" value="3.430810429299983" />
-      <entry key="M2" value="5.1468059971800875" />
-      <entry key="M5" value="10.872634759303955" />
-      <entry key="M10" value="18.96916076519362" />
-      <entry key="M15" value="26.300526388258078" />
-      <entry key="M30" value="46.53564203657913" />
-      <entry key="H1" value="78.45170785700802" />
-      <entry key="H2" value="126.86241396532799" />
-      <entry key="H4" value="187.82184217260132" />
-      <entry key="D1" value="296.2915916912754" />
-      <entry key="W1" value="324.8446241859115" />
+      <entry key="MS500" value="1.0000000002370648" />
+      <entry key="S2" value="1.0039238891464983" />
+      <entry key="S5" value="1.109015108624754" />
+      <entry key="S10" value="1.330174360943963" />
+      <entry key="S30" value="1.6911770706534375" />
+      <entry key="S60" value="1.8365817931655535" />
+      <entry key="M2" value="2.042385191223948" />
+      <entry key="M5" value="3.6812292568989555" />
+      <entry key="M10" value="7.798420930956912" />
+      <entry key="M15" value="11.685496089068746" />
+      <entry key="M30" value="22.749486359998368" />
+      <entry key="H1" value="50.025214328920335" />
+      <entry key="H2" value="106.1633984242862" />
+      <entry key="H4" value="188.14111560579948" />
+      <entry key="D1" value="358.4207291704562" />
+      <entry key="W1" value="407.87987869100283" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.351892170077261E-18" />
-      <entry key="MS500" value="4.742120445076353E-4" />
-      <entry key="S2" value="0.23577390912225155" />
-      <entry key="S5" value="0.8468883330007886" />
-      <entry key="S10" value="1.344451062930547" />
-      <entry key="S30" value="2.968243348846934" />
-      <entry key="S60" value="5.00742778873832" />
-      <entry key="M2" value="8.41725710754331" />
-      <entry key="M5" value="19.235834548044355" />
-      <entry key="M10" value="36.621657096950734" />
-      <entry key="M15" value="53.691947120058195" />
-      <entry key="M30" value="100.44428320162295" />
-      <entry key="H1" value="173.40654714215665" />
-      <entry key="H2" value="288.88749270021736" />
-      <entry key="H4" value="441.10966379833684" />
-      <entry key="D1" value="721.408007073085" />
-      <entry key="W1" value="796.4159610452763" />
+      <entry key="MS100" value="1.0077997780979234E-11" />
+      <entry key="MS500" value="0.006319385535175809" />
+      <entry key="S2" value="0.2829718504378851" />
+      <entry key="S5" value="0.6663515835648189" />
+      <entry key="S10" value="1.0286927665107157" />
+      <entry key="S30" value="1.551154291199155" />
+      <entry key="S60" value="1.8024574389694779" />
+      <entry key="M2" value="3.0198145844650623" />
+      <entry key="M5" value="12.667686409293792" />
+      <entry key="M10" value="29.011550022554363" />
+      <entry key="M15" value="41.28579083468623" />
+      <entry key="M30" value="70.79809699224901" />
+      <entry key="H1" value="137.0722216358423" />
+      <entry key="H2" value="271.52918865131653" />
+      <entry key="H4" value="471.6773577352964" />
+      <entry key="D1" value="900.0151696172152" />
+      <entry key="W1" value="1026.5811808360763" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -142,17 +161,21 @@
     "Go Test.TestUser_Create in github.com/clemilsonazevedo/9-apis/internal/infra/database.executor": "Run",
     "Go Test.TestUser_FindUserByEmail in github.com/clemilsonazevedo/9-apis/internal/infra/database.executor": "Run",
     "Go Test.TestUser_ValidatePassword in github.com/clemilsonazevedo/9-apis/internal/entity.executor": "Run",
+    "Go Test.go test github.com/clemilsonazevedo/9-apis/internal/infra/database.executor": "Run",
+    "HTTP Request.9_apis-endpoints | #1.executor": "Run",
+    "HTTP Request.9_apis-endpoints | Send POST request with json body.executor": "Run",
+    "HTTP Request.create-product | Create Product.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
     "RunOnceActivity.GoLinterPluginStorageMigration": "true",
     "RunOnceActivity.GoOptimizationToolWindowEnableInLayout.v333333": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.analysis.ui.options.defaults": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -162,7 +185,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "swagger",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
@@ -174,7 +197,22 @@
       <recent name="$PROJECT_DIR$/configs" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestProduct_Delete in github.com/clemilsonazevedo/9-apis/internal/infra/database">
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="9_apis-endpoints | #1" value="STOPPED" />
+              <entry key="9_apis-endpoints | Send POST request with json body" value="STOPPED" />
+              <entry key="create-product | Create Product" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.create-product | Create Product">
     <configuration name="go build github.com/clemilsonazevedo/9-apis/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="9-apis" />
       <working_directory value="$PROJECT_DIR$" />
@@ -193,18 +231,6 @@
       <auto_managed_config_id value="$PROJECT_DIR$/cmd/server" />
       <method v="2" />
     </configuration>
-    <configuration name="TestProduct_Create in github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="9-apis" />
-      <working_directory value="$PROJECT_DIR$/internal/infra/database" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestProduct_Create\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestProduct_Delete in github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="9-apis" />
       <working_directory value="$PROJECT_DIR$/internal/infra/database" />
@@ -217,7 +243,7 @@
       <pattern value="^\QTestProduct_Delete\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestProduct_FindAll in github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="9-apis" />
       <working_directory value="$PROJECT_DIR$/internal/infra/database" />
       <root_directory value="$PROJECT_DIR$" />
@@ -226,40 +252,24 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestProduct_FindAll\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestProduct_FindById in github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="9-apis" />
-      <working_directory value="$PROJECT_DIR$/internal/infra/database" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestProduct_FindById\E$" />
+    <configuration name="9_apis-endpoints | Send POST request with json body" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/9_apis-endpoints.http" executionIdentifier="Send POST request with json body" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="TestProduct_Update in github.com/clemilsonazevedo/9-apis/internal/infra/database" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="9-apis" />
-      <working_directory value="$PROJECT_DIR$/internal/infra/database" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestProduct_Update\E$" />
+    <configuration name="9_apis-endpoints | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/9_apis-endpoints.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="create-product | Create Product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/create-product.http" executionIdentifier="Create Product" runType="Run single request">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.create-product | Create Product" />
+        <item itemvalue="HTTP Request.9_apis-endpoints | Send POST request with json body" />
+        <item itemvalue="HTTP Request.9_apis-endpoints | #1" />
+        <item itemvalue="Go Test.go test github.com/clemilsonazevedo/9-apis/internal/infra/database" />
         <item itemvalue="Go Test.TestProduct_Delete in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-        <item itemvalue="Go Test.TestProduct_Update in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-        <item itemvalue="Go Test.TestProduct_FindById in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-        <item itemvalue="Go Test.TestProduct_FindAll in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
-        <item itemvalue="Go Test.TestProduct_Create in github.com/clemilsonazevedo/9-apis/internal/infra/database" />
       </list>
     </recent_temporary>
   </component>
@@ -284,6 +294,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: create user entety and tests" />
     <MESSAGE value="feat: create user &amp; product entity and tests" />
@@ -293,7 +314,8 @@
     <MESSAGE value="feat: add product db interface and methods" />
     <MESSAGE value="feat: create find all products method" />
     <MESSAGE value="feat: create some tests to product_db dile" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create some tests to product_db dile" />
+    <MESSAGE value="test: add test of update, delete and find by id product" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: add test of update, delete and find by id product" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
