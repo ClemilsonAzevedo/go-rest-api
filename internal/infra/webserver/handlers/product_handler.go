@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
+	"strconv"
 	"uuid"
 
 	"github.com/clemilsonazevedo/9-apis/internal/dto"
@@ -119,4 +120,34 @@ func (h *ProductHandler) DeleteProduct(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
+}
+
+func (h *ProductHandler) GetAllProducts(w http.ResponseWriter, r *http.Request) {
+	pageStr := r.URL.Query().Get("page")
+	limitStr := r.URL.Query().Get("limit")
+	sort := r.URL.Query().Get("sort")
+
+	page, err := strconv.Atoi(pageStr)
+	if err != nil {
+		page = 0
+	}
+
+	limit, err := strconv.Atoi(limitStr)
+	if err != nil {
+		limit = 10
+	}
+
+	if sort == "" {
+		sort = "asc"
+	}
+
+	products, err := h.ProductDB.FindAll(page, limit, sort)
+	if err != nil {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(products)
 }
