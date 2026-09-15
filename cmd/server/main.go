@@ -2,7 +2,6 @@ package main
 
 import (
 	"net/http"
-	"strconv"
 
 	"github.com/clemilsonazevedo/9-apis/configs"
 	"github.com/clemilsonazevedo/9-apis/internal/entity"
@@ -28,9 +27,10 @@ func main() {
 	db.AutoMigrate(&entity.Product{}, &entity.User{})
 
 	productHandler := handlers.NewProductHandler(database.NewProduct(db))
-	jwtEI, _ := strconv.Atoi(conf.JWTEExpiresIn)
-	userHandler := handlers.NewUserHandler(database.NewUser(db), conf.TokenAuth, jwtEI)
+	userHandler := handlers.NewUserHandler(database.NewUser(db))
 	r := chi.NewRouter()
+	r.Use(middleware.WithValue("jwt", conf.TokenAuth))
+	r.Use(middleware.WithValue("jwtExpiresIn", conf.JWTEExpiresIn))
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 

@@ -7,15 +7,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: add get all products handler">
-      <change afterPath="$PROJECT_DIR$/internal/infra/webserver/handlers/user_handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/users.http" afterDir="false" />
+    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: create user handlers and requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dto/dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dto/dto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/database/interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/interfaces.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/infra/webserver/handlers/product_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/webserver/handlers/product_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/webserver/handlers/user_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/webserver/handlers/user_handler.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,61 +66,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.1604928094674955E-101" />
+      <entry key="S2" value="5.836609174488134E-26" />
+      <entry key="S5" value="8.062398234642969E-11" />
+      <entry key="S10" value="8.979646811661973E-6" />
+      <entry key="S30" value="0.023411982953360846" />
+      <entry key="S60" value="0.28882256225788716" />
+      <entry key="M2" value="1.5628753329365297" />
+      <entry key="M5" value="5.188839616400867" />
+      <entry key="M10" value="8.076603663138881" />
+      <entry key="M15" value="9.424226168742244" />
+      <entry key="M30" value="11.119082346009385" />
+      <entry key="H1" value="14.747070417033543" />
+      <entry key="H2" value="41.75589430512831" />
+      <entry key="H4" value="147.2040315360397" />
+      <entry key="D1" value="751.3956155449044" />
+      <entry key="W1" value="1065.6455095327233" />
+    </decayedCancelled>
+    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000836282" />
-      <entry key="S10" value="1.0000153049636218" />
-      <entry key="S30" value="1.0875179717149834" />
-      <entry key="S60" value="1.9969750598394707" />
-      <entry key="M2" value="4.700489206313607" />
-      <entry key="M5" value="10.9559788620245" />
-      <entry key="M10" value="16.7466452266909" />
-      <entry key="M15" value="19.836787670889834" />
-      <entry key="M30" value="25.96560438148171" />
-      <entry key="H1" value="50.258908159512806" />
-      <entry key="H2" value="126.71255806281674" />
-      <entry key="H4" value="280.6562762879586" />
-      <entry key="D1" value="829.6957682256755" />
-      <entry key="W1" value="1062.1545110495651" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.5639913613604073E-78" />
-      <entry key="S2" value="4.001558532324001E-20" />
-      <entry key="S5" value="1.7455137872875476E-8" />
-      <entry key="S10" value="1.438571896220833E-4" />
-      <entry key="S30" value="0.11408873747728156" />
-      <entry key="S60" value="0.7839975010459187" />
-      <entry key="M2" value="2.1975645764107794" />
-      <entry key="M5" value="5.201521446825499" />
-      <entry key="M10" value="8.388127573992593" />
-      <entry key="M15" value="10.221327347178196" />
-      <entry key="M30" value="14.019635809504882" />
-      <entry key="H1" value="29.137372425442383" />
-      <entry key="H2" value="76.98021090969377" />
-      <entry key="H4" value="175.59523506112683" />
-      <entry key="D1" value="532.901029211086" />
-      <entry key="W1" value="683.6803166797615" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000000157887" />
+      <entry key="S30" value="1.0004757503141462" />
+      <entry key="S60" value="1.0483667001393742" />
+      <entry key="M2" value="1.57873118542033" />
+      <entry key="M5" value="3.7499675827984666" />
+      <entry key="M10" value="5.677237377680132" />
+      <entry key="M15" value="6.590178144277795" />
+      <entry key="M30" value="7.714691389006931" />
+      <entry key="H1" value="9.645891298576618" />
+      <entry key="H2" value="25.115334320538036" />
+      <entry key="H4" value="90.03583242940988" />
+      <entry key="D1" value="477.60277633298006" />
+      <entry key="W1" value="680.23853625953" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.318604426004523E-6" />
-      <entry key="MS500" value="0.09394759237909764" />
-      <entry key="S2" value="0.5536322922421425" />
-      <entry key="S5" value="0.7893844626027806" />
-      <entry key="S10" value="0.8886221217253938" />
-      <entry key="S30" value="1.1586661060881633" />
-      <entry key="S60" value="2.7448099605461973" />
-      <entry key="M2" value="6.86302146192294" />
-      <entry key="M5" value="16.12281482331746" />
-      <entry key="M10" value="25.103405962986923" />
-      <entry key="M15" value="30.03144711111348" />
-      <entry key="M30" value="39.96568587462887" />
-      <entry key="H1" value="79.37491303499444" />
-      <entry key="H2" value="203.66504296269105" />
-      <entry key="H4" value="456.22115044525515" />
-      <entry key="D1" value="1362.5824087607537" />
-      <entry key="W1" value="1745.8322230115523" />
+      <entry key="MS100" value="7.566575317010409E-5" />
+      <entry key="MS500" value="0.1498924892238891" />
+      <entry key="S2" value="0.6222214348016389" />
+      <entry key="S5" value="0.8271380262460898" />
+      <entry key="S10" value="0.9094797940474085" />
+      <entry key="S30" value="0.9922934969836877" />
+      <entry key="S60" value="1.3176426651491977" />
+      <entry key="M2" value="3.1207782245572884" />
+      <entry key="M5" value="8.916549564115389" />
+      <entry key="M10" value="13.73711348997489" />
+      <entry key="M15" value="16.001537482841236" />
+      <entry key="M30" value="18.82628486640346" />
+      <entry key="H1" value="24.387968500567503" />
+      <entry key="H2" value="66.86320601607726" />
+      <entry key="H4" value="237.22475089382345" />
+      <entry key="D1" value="1228.9855556961907" />
+      <entry key="W1" value="1745.8814622248044" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -226,7 +222,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.products | GET all products">
+  <component name="RunManager" selected="HTTP Request.products | Update Product">
     <configuration name="go build github.com/clemilsonazevedo/9-apis/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="9-apis" />
       <working_directory value="$PROJECT_DIR$" />
@@ -254,7 +250,7 @@
     <configuration name="products | GET product by ID" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/products.http" executionIdentifier="GET product by ID" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="users | Create User" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/users.http" executionIdentifier="Create User" runType="Run single request">
+    <configuration name="products | Update Product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/products.http" executionIdentifier="Update Product" index="4" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="users | Generate JWT Token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/users.http" executionIdentifier="Generate JWT Token" index="2" runType="Run single request">
@@ -262,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.products | Update Product" />
+        <item itemvalue="HTTP Request.products | GET product by ID" />
         <item itemvalue="HTTP Request.products | GET all products" />
         <item itemvalue="HTTP Request.users | Generate JWT Token" />
-        <item itemvalue="HTTP Request.products | GET product by ID" />
         <item itemvalue="HTTP Request.create-product | GET all products" />
-        <item itemvalue="HTTP Request.users | Create User" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +311,8 @@
     <MESSAGE value="feat: create handler to create product" />
     <MESSAGE value="feat: create product handler" />
     <MESSAGE value="feat: add get all products handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add get all products handler" />
+    <MESSAGE value="feat: create user handlers and requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create user handlers and requests" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
