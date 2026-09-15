@@ -1,0 +1,16 @@
+basePath: /
+host: localhost:8080
+info:
+  contact:
+    email: clemilsondeazevedo@gmail.com
+    name: clemilson Azevedo
+  description: An API to study golang with tests and JWT
+  title: API to study Golang
+  version: "1.0"
+paths: {}
+securityDefinitions:
+  ApiKeyAuth:
+    in: Header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
