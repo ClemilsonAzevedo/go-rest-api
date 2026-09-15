@@ -7,11 +7,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: create product handler">
+    <list default="true" id="a6556531-80be-4b29-aab5-92b3374e764c" name="Changes" comment="feat: add get all products handler">
+      <change afterPath="$PROJECT_DIR$/internal/infra/webserver/handlers/user_handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/users.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dto/dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dto/dto.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/infra/database/interfaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/database/interfaces.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/infra/webserver/handlers/product_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/infra/webserver/handlers/product_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/create-product.http" beforeDir="false" afterPath="$PROJECT_DIR$/test/create-product.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,14 +23,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="20" />
+    <option name="cachedIndexableFilesCount" value="33" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTTP Request" />
         <option value="Go File" />
+        <option value="HTTP Request" />
+        <option value="HTTP Public Environment File" />
       </list>
     </option>
   </component>
@@ -47,11 +52,11 @@
   }
 }</component>
   <component name="HttpClientEndpointsTabState">
-    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;1aa61ff4ab7cc62a1ce3f0322442142f6cc4ee51&quot; value=&quot;###&amp;#10;PUT http://localhost:8080/products/{{id}}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests /&gt;" />
   </component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="HttpClientSelectedEnvironments">
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
@@ -65,61 +70,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.00000243103147" />
-      <entry key="MS500" value="1.07536299047895" />
-      <entry key="S2" value="1.533486357681846" />
-      <entry key="S5" value="2.0069017942560166" />
-      <entry key="S10" value="2.563433692737277" />
-      <entry key="S30" value="3.402515907844425" />
-      <entry key="S60" value="4.376176912461289" />
-      <entry key="M2" value="8.126950480017364" />
-      <entry key="M5" value="20.044000252718835" />
-      <entry key="M10" value="31.653847853685527" />
-      <entry key="M15" value="38.03957841912052" />
-      <entry key="M30" value="49.7688836733843" />
-      <entry key="H1" value="75.21428411478301" />
-      <entry key="H2" value="138.24881975879129" />
-      <entry key="H4" value="263.8803806723082" />
-      <entry key="D1" value="650.253218240043" />
-      <entry key="W1" value="791.6016797689775" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000836282" />
+      <entry key="S10" value="1.0000153049636218" />
+      <entry key="S30" value="1.0875179717149834" />
+      <entry key="S60" value="1.9969750598394707" />
+      <entry key="M2" value="4.700489206313607" />
+      <entry key="M5" value="10.9559788620245" />
+      <entry key="M10" value="16.7466452266909" />
+      <entry key="M15" value="19.836787670889834" />
+      <entry key="M30" value="25.96560438148171" />
+      <entry key="H1" value="50.258908159512806" />
+      <entry key="H2" value="126.71255806281674" />
+      <entry key="H4" value="280.6562762879586" />
+      <entry key="D1" value="829.6957682256755" />
+      <entry key="W1" value="1062.1545110495651" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5259126251089895E-88" />
-      <entry key="S2" value="1.1198093307315996E-22" />
-      <entry key="S5" value="1.8873422930050705E-9" />
-      <entry key="S10" value="5.6102881421051366E-5" />
-      <entry key="S30" value="0.07529175379571619" />
-      <entry key="S60" value="0.7582166776285696" />
-      <entry key="M2" value="3.3217076500349147" />
-      <entry key="M5" value="9.901255443921478" />
-      <entry key="M10" value="16.25440054957438" />
-      <entry key="M15" value="20.096495033566196" />
-      <entry key="M30" value="27.850994978924486" />
-      <entry key="H1" value="45.05897521594445" />
-      <entry key="H2" value="87.12939030573234" />
-      <entry key="H4" value="171.3507436846099" />
-      <entry key="D1" value="426.4342354238288" />
-      <entry key="W1" value="518.2715902601152" />
+      <entry key="MS500" value="2.5639913613604073E-78" />
+      <entry key="S2" value="4.001558532324001E-20" />
+      <entry key="S5" value="1.7455137872875476E-8" />
+      <entry key="S10" value="1.438571896220833E-4" />
+      <entry key="S30" value="0.11408873747728156" />
+      <entry key="S60" value="0.7839975010459187" />
+      <entry key="M2" value="2.1975645764107794" />
+      <entry key="M5" value="5.201521446825499" />
+      <entry key="M10" value="8.388127573992593" />
+      <entry key="M15" value="10.221327347178196" />
+      <entry key="M30" value="14.019635809504882" />
+      <entry key="H1" value="29.137372425442383" />
+      <entry key="H2" value="76.98021090969377" />
+      <entry key="H4" value="175.59523506112683" />
+      <entry key="D1" value="532.901029211086" />
+      <entry key="W1" value="683.6803166797615" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9726573284138513" />
-      <entry key="MS500" value="1.0695203841310086" />
-      <entry key="S2" value="1.5315413782032095" />
-      <entry key="S5" value="2.0058787589505633" />
-      <entry key="S10" value="2.5628115393211868" />
-      <entry key="S30" value="3.475613107210169" />
-      <entry key="S60" value="5.12173547709021" />
-      <entry key="M2" value="11.408923034143026" />
-      <entry key="M5" value="29.883029641783615" />
-      <entry key="M10" value="47.854860457481806" />
-      <entry key="M15" value="58.09229639446134" />
-      <entry key="M30" value="77.58933835625061" />
-      <entry key="H1" value="120.24625628044033" />
-      <entry key="H2" value="225.35044798476494" />
-      <entry key="H4" value="435.204019256147" />
-      <entry key="D1" value="1076.6765428647084" />
-      <entry key="W1" value="1309.8713854411526" />
+      <entry key="MS100" value="7.318604426004523E-6" />
+      <entry key="MS500" value="0.09394759237909764" />
+      <entry key="S2" value="0.5536322922421425" />
+      <entry key="S5" value="0.7893844626027806" />
+      <entry key="S10" value="0.8886221217253938" />
+      <entry key="S30" value="1.1586661060881633" />
+      <entry key="S60" value="2.7448099605461973" />
+      <entry key="M2" value="6.86302146192294" />
+      <entry key="M5" value="16.12281482331746" />
+      <entry key="M10" value="25.103405962986923" />
+      <entry key="M15" value="30.03144711111348" />
+      <entry key="M30" value="39.96568587462887" />
+      <entry key="H1" value="79.37491303499444" />
+      <entry key="H2" value="203.66504296269105" />
+      <entry key="H4" value="456.22115044525515" />
+      <entry key="D1" value="1362.5824087607537" />
+      <entry key="W1" value="1745.8322230115523" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -168,6 +173,10 @@
     "HTTP Request.create-product | GET product.executor": "Run",
     "HTTP Request.create-product | GET request with dynamic variables.executor": "Run",
     "HTTP Request.create-product | Update Product.executor": "Run",
+    "HTTP Request.products | GET all products.executor": "Run",
+    "HTTP Request.products | GET product by ID.executor": "Run",
+    "HTTP Request.users | Create User.executor": "Run",
+    "HTTP Request.users | Generate JWT Token.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
     "RunOnceActivity.GoLinterPluginStorageMigration": "true",
@@ -206,18 +215,18 @@
         <entry key="HttpClient.HttpRequestRunConfigurationType">
           <value>
             <map>
-              <entry key="create-product | Create Product" value="STOPPED" />
-              <entry key="create-product | Delete Product" value="STOPPED" />
               <entry key="create-product | GET all products" value="STOPPED" />
-              <entry key="create-product | GET product" value="STOPPED" />
-              <entry key="create-product | Update Product" value="STOPPED" />
+              <entry key="products | GET all products" value="STOPPED" />
+              <entry key="products | GET product by ID" value="STOPPED" />
+              <entry key="users | Create User" value="STOPPED" />
+              <entry key="users | Generate JWT Token" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.create-product | GET all products">
+  <component name="RunManager" selected="HTTP Request.products | GET all products">
     <configuration name="go build github.com/clemilsonazevedo/9-apis/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="9-apis" />
       <working_directory value="$PROJECT_DIR$" />
@@ -236,28 +245,28 @@
       <auto_managed_config_id value="$PROJECT_DIR$/cmd/server" />
       <method v="2" />
     </configuration>
-    <configuration name="create-product | Create Product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/create-product.http" executionIdentifier="Create Product" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="create-product | Delete Product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/create-product.http" executionIdentifier="Delete Product" index="4" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="create-product | GET all products" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/create-product.http" executionIdentifier="GET all products" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="create-product | GET product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/create-product.http" executionIdentifier="GET product" index="2" runType="Run single request">
+    <configuration name="products | GET all products" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/products.http" executionIdentifier="GET all products" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="create-product | Update Product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/create-product.http" executionIdentifier="Update Product" index="3" runType="Run single request">
+    <configuration name="products | GET product by ID" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/products.http" executionIdentifier="GET product by ID" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="users | Create User" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/users.http" executionIdentifier="Create User" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="users | Generate JWT Token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/users.http" executionIdentifier="Generate JWT Token" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.products | GET all products" />
+        <item itemvalue="HTTP Request.users | Generate JWT Token" />
+        <item itemvalue="HTTP Request.products | GET product by ID" />
         <item itemvalue="HTTP Request.create-product | GET all products" />
-        <item itemvalue="HTTP Request.create-product | GET product" />
-        <item itemvalue="HTTP Request.create-product | Delete Product" />
-        <item itemvalue="HTTP Request.create-product | Update Product" />
-        <item itemvalue="HTTP Request.create-product | Create Product" />
+        <item itemvalue="HTTP Request.users | Create User" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +314,8 @@
     <MESSAGE value="test: add test of update, delete and find by id product" />
     <MESSAGE value="feat: create handler to create product" />
     <MESSAGE value="feat: create product handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create product handler" />
+    <MESSAGE value="feat: add get all products handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add get all products handler" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
